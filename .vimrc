@@ -9,6 +9,7 @@ set expandtab
 set ignorecase
 set guifont=Courier\ 14
 set tags=tags;/
+set backspace=indent,eol,start
 syntax on
 set nu
 :map <F5> :e \| syn on <CR>
@@ -19,7 +20,8 @@ set nu
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-surround'
-Plug 'xavierd/clang_complete'
+"Plug 'xavierd/clang_complete'
 Plug 'jiangmiao/auto-pairs'
+Plug 'justmao945/vim-clang'
 
 call plug#end()
