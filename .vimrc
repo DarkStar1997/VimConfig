@@ -20,7 +20,13 @@ let g:xml_syntax_folding=1
 let g:vim_json_syntax_conceal=0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 set completeopt-=preview
+highlight Pmenu ctermbg=gray
 au FileType xml setlocal foldmethod=syntax
+
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
 
 " Termite and picom hacks:
 
@@ -42,5 +48,7 @@ Plug 'mattn/emmet-vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'adelarsq/vim-matchit'
 Plug 'elzr/vim-json'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
