@@ -20,8 +20,16 @@ let g:xml_syntax_folding=1
 let g:vim_json_syntax_conceal=0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 set completeopt-=preview
-highlight Pmenu ctermbg=gray
 au FileType xml setlocal foldmethod=syntax
+
+colorscheme molokai
+let g:airline_theme='dark'
+highlight Pmenu ctermbg=black
+
+" Open nerdtree by default when opening a folder
+
+let g:NERDTreeHijackNetrw = 1
+au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
 
 map <C-t><up> :tabr<cr>
 map <C-t><down> :tabl<cr>
@@ -50,5 +58,7 @@ Plug 'adelarsq/vim-matchit'
 Plug 'elzr/vim-json'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
