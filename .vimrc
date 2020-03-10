@@ -14,8 +14,6 @@ set backspace=indent,eol,start
 syntax on
 set nu
 
-set guicursor=i:ver10-iCursor
-
 let g:xml_syntax_folding=1
 let g:vim_json_syntax_conceal=0
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
@@ -38,13 +36,13 @@ map <C-t><right> :tabn<cr>
 
 " Termite and picom hacks:
 
-augroup myCmds
-au!
-autocmd VimEnter * silent !echo -ne "\e[6 q"
-autocmd VimEnter * silent !picom-trans -c 95
-autocmd VimLeave * silent !echo -ne "\e[1 q"
-autocmd VimLeave * silent !picom-trans -c 80
-augroup END
+"augroup myCmds
+"au!
+"autocmd VimEnter * silent !echo -ne "\e[6 q"
+"autocmd VimEnter * silent !picom-trans -c 95
+"autocmd VimLeave * silent !echo -ne "\e[1 q"
+"autocmd VimLeave * silent !picom-trans -c 80
+"augroup END
 
 
 call plug#begin('~/.vim/plugged')
