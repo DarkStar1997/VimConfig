@@ -8,9 +8,9 @@ set shiftwidth=4
 set expandtab
 set ignorecase
 set nowrap
-set guifont=Courier\ 14
 set tags=tags;/
 set backspace=indent,eol,start
+set updatetime=250
 syntax on
 set nu
 
@@ -58,5 +58,10 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'jreybert/vimagit'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'drmikehenry/vim-headerguard'
 
 call plug#end()
