@@ -10,7 +10,7 @@ set ignorecase
 set nowrap
 set tags=tags;/
 set backspace=indent,eol,start
-set updatetime=250
+set updatetime=1
 syntax on
 set nu
 
@@ -24,8 +24,19 @@ colorscheme molokai
 let g:airline_theme='dark'
 highlight Pmenu ctermbg=black
 
-" Open nerdtree by default when opening a folder
+"Remember cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
 
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+    echo "@".getcmdline()
+    execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+" Open nerdtree by default when opening a folder
 let g:NERDTreeHijackNetrw = 1
 au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
 
@@ -63,5 +74,6 @@ Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'drmikehenry/vim-headerguard'
+Plug 'tpope/vim-abolish'
 
 call plug#end()
