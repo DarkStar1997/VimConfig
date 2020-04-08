@@ -8,7 +8,7 @@ set shiftwidth=4
 set expandtab
 set ignorecase
 set nowrap
-set tags=tags;/
+"set tags=tags;/
 set backspace=indent,eol,start
 set updatetime=1
 syntax on
@@ -222,5 +222,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'drmikehenry/vim-headerguard'
 Plug 'tpope/vim-abolish'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'lervag/vimtex'
+Plug 'xuhdev/vim-latex-live-preview'
+Plug 'neoclide/coc-vimtex'
 
 call plug#end()
