@@ -163,6 +163,11 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 let g:lsp_cxx_hl_use_text_props=1
 let g:xml_syntax_folding=1
 let g:vim_json_syntax_conceal=0
+let g:auto_save=1
+let g:auto_save_silent=1
+let g:auto_save_events=["InsertLeave", "TextChanged"]
+set undofile
+set undodir=$HOME/.vim/undo
 set completeopt-=preview
 au FileType xml setlocal foldmethod=syntax
 
@@ -225,5 +230,6 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'neoclide/coc-vimtex'
+Plug '907th/vim-auto-save'
 
 call plug#end()
