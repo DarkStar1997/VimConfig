@@ -196,6 +196,8 @@ map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
 
+map<C-b> :!cmake -S . -B build/ && cmake --build build/ -- -j 8<cr>
+
 " Termite and picom hacks:
 
 "augroup myCmds
