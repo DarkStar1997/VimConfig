@@ -9,6 +9,7 @@ set expandtab
 set ignorecase
 set nowrap
 "set tags=tags;/
+set directory^=$HOME/.vim/swapfiles//
 set backspace=indent,eol,start
 set updatetime=1
 syntax on
