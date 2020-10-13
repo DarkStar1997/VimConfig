@@ -160,13 +160,18 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 "COC Settings end
 
-
 let g:lsp_cxx_hl_use_text_props=1
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+
 let g:xml_syntax_folding=1
 let g:vim_json_syntax_conceal=0
 let g:auto_save=1
 let g:auto_save_silent=1
 let g:auto_save_events=["InsertLeave", "TextChanged"]
+let g:tex_flavor = 'latex'
+
 set undofile
 set undodir=$HOME/.vim/undo
 set completeopt-=preview
@@ -234,5 +239,8 @@ Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'neoclide/coc-vimtex'
 Plug '907th/vim-auto-save'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'mcchrish/nnn.vim'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
