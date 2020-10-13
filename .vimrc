@@ -242,5 +242,6 @@ Plug '907th/vim-auto-save'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mcchrish/nnn.vim'
 Plug 'rhysd/vim-clang-format'
+Plug 'regen100/cmake-language-server'
 
 call plug#end()
