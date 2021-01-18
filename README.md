@@ -1,2 +1,2 @@
 # VimConfig
-Contains my Vim config files.
+Contains my Vim config files
